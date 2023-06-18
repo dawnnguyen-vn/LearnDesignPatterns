@@ -1,12 +1,9 @@
-type Person = {
-  name: string;
-  age: number;
-}
+import { createContext } from "./Strategy/Context"
+import { Strategy1 } from "./Strategy/ConcreteStrategies"
+import { Strategy2 } from "./Strategy/ConcreteStrategies"
 
-const person: Person = {
-  name: 'Danh',
-  age: 23
-}
+const context1 = createContext(Strategy1);
+const context2 = createContext(Strategy2);
 
-console.log(person.name);
-
+context1.doSomething();
+context2.doSomething();
